@@ -126,6 +126,9 @@
 }
 
 #define targetR 250
+
+
+
 #define targetL -220
 // 手指抬起的时候调用
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -145,6 +148,8 @@
     if (_mainV.frame.origin.x > screenW * 0.5) { // _main.x > screenW * 0.5 自动定位到右边 250
         target = targetR;
     }else if (CGRectGetMaxX(_mainV.frame) < screenW * 0.5){ // max(_main.x) < screenW * 0.5 自动定位到左边 -220
+        
+    
         target = targetL;
     }
     
